@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
-
+import { ActorCast, MovieInfoExtended } from 'src/app/movie';
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
@@ -9,9 +9,9 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
 })
 export class MovieDetailsComponent {
 
-    getMovieDetails:any=[]
-    getMovieVideo:any=[]
-    getMovieCast:any=[]
+    getMovieDetails!:MovieInfoExtended
+    getMovieVideo!:string
+    getMovieCast!:ActorCast[]
 
     constructor(private service:MovieApiServiceService,private router:ActivatedRoute){
       let paramsId=router.snapshot.paramMap.get('id')

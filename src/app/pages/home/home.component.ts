@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
 import { Title } from '@angular/platform-browser';
+import { MovieInfo } from 'src/app/movie';
 
 @Component({
   selector: 'app-home',
@@ -24,15 +25,15 @@ export class HomeComponent implements OnInit{
       this.sciencefictionMovie();
       this.thrillerMovie();
      }
-    bannerResult:any=[];
-    trendingResult:any=[];
-    actionMovieResult: any = [];
-    adventureMovieResult: any = [];
-    animationMovieResult: any = [];
-    comedyMovieResult: any = [];
-    documentaryMovieResult: any = [];
-    sciencefictionMovieResult: any = [];
-    thrillerMovieResult: any = [];
+    bannerResult!:MovieInfo[];
+    trendingResult!:MovieInfo[];
+    actionMovieResult!:MovieInfo[];
+    adventureMovieResult!:MovieInfo[];
+    animationMovieResult!:MovieInfo[];
+    comedyMovieResult!:MovieInfo[];
+    documentaryMovieResult!:MovieInfo[];
+    sciencefictionMovieResult!:MovieInfo[];
+    thrillerMovieResult!:MovieInfo[];
     
     // bannerdata
 
